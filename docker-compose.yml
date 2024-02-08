@@ -1,0 +1,16 @@
+version: '3.0'
+
+services:
+   node-hello:
+      container_name: node-hello
+      image: node-hello:latest 
+      restart: unless-stopped
+      ports:
+         - "3000:3000"
+
+networks:
+   default:
+      name: node-hello-network
+      external: true
+ 
+
